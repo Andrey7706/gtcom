@@ -1,0 +1,43 @@
+@function rem($px) {
+    @return $px / 18px + 0rem;
+}
+
+@mixin desktop {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 992px){
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: 480px){
+        @content;
+    }
+}
+
+@mixin Roboto($style: regular) {
+    @if $style == regular {
+        font-family: 'Roboto Regular';
+    }
+    @if $style == medium {
+        font-family: 'Roboto Medium';
+    }
+    @if $style == bold {
+        font-family: 'Roboto Bold';
+    }
+    @if $style == black {
+        font-family: 'Roboto-Black';
+    }
+}
+
